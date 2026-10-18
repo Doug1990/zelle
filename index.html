@@ -412,8 +412,8 @@
   .teil-check .btn { min-height: 40px; }
   .teil-check.stop p { color: var(--coral); }
   @media (max-width: 640px) {
-    .teil-step span { display: none; }
-    .teil-step b { font-size: 17px; }
+    .teil-step span { font-size: 10px; letter-spacing: -0.01em; }
+    .teil-step b { font-size: 15px; }
     .teil-cols { grid-template-columns: 1fr; }
     .teil-seg button, .teil-ctrl .btn, .teil-check .btn { min-height: 44px; }
   }
@@ -3956,11 +3956,11 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
       town: 'Das Archiv kopiert jeden Aktenordner, Seite für Seite. Erst wenn alle Kopien da sind, darf der Umzug beginnen.',
       aha: 'Wer teilen will, muss zuerst kopieren.' },
     { t: ['Infrastruktur verdoppeln', 'Die Stadt baut alles zweimal'],
-      cell: 'Mitochondrien und Golgi-Apparat wachsen und teilen sich selbst, auch das Zentrosom wird doppelt. Es spannt gleich die Fasern.',
+      cell: 'Mitochondrien und Golgi-Apparat wachsen und teilen sich selbst, auch das Zentrosom wird doppelt. Das Zentrosom ist die Ansatzstelle für die Fasern, die gleich die Chromosomen ziehen.',
       town: 'Kraftwerke und Paketzentrum werden gedoppelt, dazu die Seilwinden für den Umzug. So läuft jede der beiden Städte vom ersten Tag an.',
       aha: 'Eine neue Stadt ohne Kraftwerk wäre am ersten Tag dunkel.' },
     { t: ['Chromosomen sortieren', 'Die Ordner werden verteilt'],
-      cell: 'Die Kernhülle löst sich auf. Spindelfasern docken an, reihen die Chromosomen in der Mitte auf und ziehen die beiden Hälften zu entgegengesetzten Polen.',
+      cell: 'Die Kernhülle löst sich auf. Spindelfasern, dünne Zugfasern aus Eiweiß, docken an, reihen die Chromosomen in der Mitte auf und ziehen die beiden Hälften zu entgegengesetzten Polen.',
       town: 'Das Archiv wird für den Umzug geöffnet. Zugseile ziehen von beiden Seiten, und jede Stadt bekommt genau eine Kopie jedes Ordners.',
       aha: 'Hier entscheidet sich, ob beide Hälften vollständig sind.' },
     { t: ['Membran einschnüren', 'Die Grenze zieht eine Mauer'],
@@ -3981,9 +3981,9 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
   // ---- Form der Zelle: zwei Ellipsen, die auseinanderwandern, plus Weichzeichner-Schwelle ----
   function shape(p) {
     return {
-      d: 70 * S(p, 2.4, 3) + 65 * S(p, 3, 4) + 25 * S(p, 4, 5),
-      rx: 188 + 12 * S(p, 0, 2) - 50 * S(p, 2.4, 3) - 22 * S(p, 3, 4) - 6 * S(p, 4, 5),
-      ry: 158 + 2 * S(p, 0, 2) - 10 * S(p, 2.4, 3) - 6 * S(p, 3, 4) - 6 * S(p, 4, 5)
+      d: 70 * S(p, 3, 3.5) + 65 * S(p, 3.5, 4) + 25 * S(p, 4, 5),
+      rx: 188 + 12 * S(p, 0, 2) - 50 * S(p, 3, 3.5) - 22 * S(p, 3.5, 4) - 6 * S(p, 4, 5),
+      ry: 158 + 2 * S(p, 0, 2) - 10 * S(p, 3, 3.5) - 6 * S(p, 3.5, 4) - 6 * S(p, 4, 5)
     };
   }
   var masks = [
