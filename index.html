@@ -1427,6 +1427,26 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
   .teil-nr::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--tc); margin-right: 10px; vertical-align: 1px; }
   .teil-frage { margin: 0 auto 8px; max-width: 46ch; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 17px; line-height: 1.45; color: var(--tc); }
   .teil-bruecke { max-width: 640px; margin: 8px auto 0; padding: 0 20px; text-align: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: #A9AFC0; }
+  .idee-rail { display: none; }
+  @media (min-width: 1320px) {
+    .idee-rail { position: fixed; z-index: 20; left: max(16px, calc((100vw - 860px) / 2 - 244px)); top: 50%; transform: translateY(-50%); width: 216px; display: none; font-family: 'IBM Plex Sans', sans-serif; }
+    .idee-rail.an { display: block; }
+    .idee-rail .rail-kopf { margin: 0 0 12px 4px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #929CB0; }
+    .idee-rail ol { list-style: none; margin: 0; padding: 0; position: relative; }
+    .idee-rail ol::before { content: ""; position: absolute; left: 15px; top: 18px; bottom: 18px; width: 2px; background: #2F3D36; }
+    .idee-rail li { position: relative; }
+    .idee-rail a { display: flex; gap: 12px; align-items: flex-start; padding: 6px 4px; min-height: 44px; text-decoration: none; color: #929CB0; border-radius: 10px; }
+    .idee-rail a:hover { background: rgba(255,255,255,0.04); }
+    .idee-rail a:focus-visible { outline: 2px solid #F2C46B; outline-offset: 1px; }
+    .rail-n { flex: none; position: relative; z-index: 1; width: 24px; height: 24px; margin-top: 3px; border-radius: 50%; border: 2px solid var(--c); background: #0F1713; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: #A9AFC0; }
+    .rail-t { display: flex; flex-direction: column; gap: 1px; min-width: 0; font-size: 12.5px; line-height: 1.4; }
+    .rail-t b { font-weight: 500; color: #C7CAD6; }
+    .rail-t em { font-style: normal; color: var(--c); font-size: 11.5px; }
+    .rail-t small { display: none; font-size: 12px; line-height: 1.45; color: #A9AFC0; margin-top: 3px; }
+    .idee-rail a[aria-current="true"] .rail-n { background: var(--c); color: #0D1310; }
+    .idee-rail a[aria-current="true"] .rail-t b { color: #E8E6E0; font-size: 14px; }
+    .idee-rail a[aria-current="true"] .rail-t small { display: block; }
+  }
   .idee-band { position: sticky; top: 0; z-index: 30; margin: 24px auto 0; max-width: 640px; padding: 6px 56px 6px 12px; display: none; align-items: center; gap: 4px; background: #0F1713; border-bottom: 1px solid #25314a; font-family: 'IBM Plex Sans', sans-serif; }
   .idee-band.an { display: flex; }
   .idee-band a { flex: none; display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border-radius: 50%; font-size: 13px; font-weight: 600; color: #A9AFC0; text-decoration: none; position: relative; }
@@ -1504,7 +1524,9 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
     .aus-leit .al-flow { animation: none; }
     .dorf-vgl .bar i, #dorfPanel .stat .bar i { transition: none; }
   }
-</style><nav class="idee-band" id="ideeBand" aria-label="Die fünf Ideen und das Fazit"><a href="#teil1" style="--c:#4FA9B1" aria-label="Prinzip 1: Die Zelle"><span>1</span></a><a href="#teil2" style="--c:#8590E6" aria-label="Prinzip 2: Das Gen"><span>2</span></a><a href="#teil3" style="--c:#7DBB63" aria-label="Prinzip 3: Evolution"><span>3</span></a><a href="#teil4" style="--c:#D9A64A" aria-label="Prinzip 4: Leben als Chemie"><span>4</span></a><a href="#teil5" style="--c:#E58F7A" aria-label="Prinzip 5: Leben als Information"><span>5</span></a><a class="fazit" href="#teil6" style="--c:#E8E6E0" aria-label="Fazit: Was ist Leben?"><span>Fazit</span></a><span class="band-name" id="ideeName" aria-hidden="true"></span></nav>
+</style><nav class="idee-rail" id="ideeRail" aria-label="Rolle der Idee im Ganzen"><p class="rail-kopf">Leben in fünf Ideen</p><ol><li style="--c:#4FA9B1"><a href="#teil1"><span class="rail-n">1</span><span class="rail-t"><b>Die Zelle</b><em>Der Ort</em><small>Alles Weitere findet in Zellen statt. Sie sind die Bühne für die anderen vier Ideen.</small></span></a></li><li style="--c:#8590E6"><a href="#teil2"><span class="rail-n">2</span><span class="rail-t"><b>Das Gen</b><em>Die Anleitung</em><small>Sagt der Zelle, was sie baut, und wird bei jeder Teilung weitergegeben.</small></span></a></li><li style="--c:#7DBB63"><a href="#teil3"><span class="rail-n">3</span><span class="rail-t"><b>Evolution</b><em>Die Herkunft</em><small>Erklärt, warum die Anleitung so ist und nicht anders: Was funktionierte, blieb.</small></span></a></li><li style="--c:#D9A64A"><a href="#teil4"><span class="rail-n">4</span><span class="rail-t"><b>Leben als Chemie</b><em>Der Antrieb</em><small>Stoffe und Energie. Ohne sie läuft keine der anderen Ideen.</small></span></a></li><li style="--c:#E58F7A"><a href="#teil5"><span class="rail-n">5</span><span class="rail-t"><b>Leben als Information</b><em>Die Steuerung</em><small>Signale und Rückkopplung verbinden die Teile und halten das Ganze im Gleichgewicht.</small></span></a></li><li style="--c:#E8E6E0"><a href="#teil6"><span class="rail-n">✓</span><span class="rail-t"><b>Fazit</b><em>Das Ganze</em><small>Alle fünf greifen ineinander. Fällt eines aus, wackeln die anderen.</small></span></a></li></ol></nav>
+
+<nav class="idee-band" id="ideeBand" aria-label="Die fünf Ideen und das Fazit"><a href="#teil1" style="--c:#4FA9B1" aria-label="Prinzip 1: Die Zelle"><span>1</span></a><a href="#teil2" style="--c:#8590E6" aria-label="Prinzip 2: Das Gen"><span>2</span></a><a href="#teil3" style="--c:#7DBB63" aria-label="Prinzip 3: Evolution"><span>3</span></a><a href="#teil4" style="--c:#D9A64A" aria-label="Prinzip 4: Leben als Chemie"><span>4</span></a><a href="#teil5" style="--c:#E58F7A" aria-label="Prinzip 5: Leben als Information"><span>5</span></a><a class="fazit" href="#teil6" style="--c:#E8E6E0" aria-label="Fazit: Was ist Leben?"><span>Fazit</span></a><span class="band-name" id="ideeName" aria-hidden="true"></span></nav>
 
 <div class="teil-kopf" id="teil1" role="group" aria-label="Prinzip 1 von 5: Die Zelle" style="--tc:#4FA9B1">
   <p class="teil-nr">Prinzip 1 von 5</p>
@@ -7952,7 +7974,7 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
 // --- Fünf Ideen: Fortschrittsband und ATP-Kasse ---
 (function () {
   'use strict';
-  var band = document.getElementById('ideeBand'), name = document.getElementById('ideeName');
+  var band = document.getElementById('ideeBand'), rail = document.getElementById('ideeRail'), rl = rail ? rail.querySelectorAll('a') : [], name = document.getElementById('ideeName');
   if (band) {
     var kopfe = Array.prototype.slice.call(document.querySelectorAll('.teil-kopf')), links = band.querySelectorAll('a'), tick = false;
     var titel = kopfe.map(function (k) { return k.querySelector('.teil-titel').textContent; });
@@ -7961,19 +7983,20 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
       var cur = -1, y = window.innerHeight * 0.45;
       kopfe.forEach(function (k, i) { if (k.getBoundingClientRect().top < y) cur = i; });
       band.classList.toggle('an', cur >= 0);
+      if (rail) { rail.classList.toggle('an', cur >= 0); rl.forEach(function (a, i) { if (i === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }); }
       links.forEach(function (a, i) { if (i === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
       name.textContent = cur >= 0 ? titel[cur] : '';
     }
     window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
     window.addEventListener('resize', update);
-    band.addEventListener('click', function (e) {
+    [band, rail].forEach(function (el) { el && el.addEventListener('click', function (e) {
       var a = e.target.closest('a'); if (!a) return;
       var t = document.querySelector(a.getAttribute('href')); if (!t) return;
       e.preventDefault();
       var root = document.documentElement; root.style.scrollBehavior = 'auto';
       t.scrollIntoView(); history.replaceState(null, '', a.getAttribute('href'));
       requestAnimationFrame(function () { root.style.scrollBehavior = ''; });
-    });
+    }); });
     update();
   }
   var kasse = document.getElementById('atpKasse');
