@@ -28,7 +28,7 @@
     --ink: #E8E6E0; --muted: #A9AFC0; --dim: #929CB0; --line: #2F3D36;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; background-color: #0F1713; }
   .skip-link { position: fixed; left: 12px; top: -80px; z-index: 10000; padding: 13px 18px; border-radius: 8px; background: #E8E6E0; color: #0B1220; font: 500 14px 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; text-decoration: none; }
   .skip-link:focus { top: 12px; outline: 3px solid #F2C46B; outline-offset: 2px; }
   main:focus { outline: none; }
@@ -1344,8 +1344,8 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
 </section>
 
 <aside class="pfad-kurz" id="kurz" aria-labelledby="kurzT">
-  <h2 id="kurzT">Die Seite in fünf Ideen und einem Schluss</h2>
-  <p class="pfad-vor">30 Abschnitte, nach Paul Nurses fünf großen Ideen der Biologie geordnet. Tippe eine Station.</p>
+  <h2 id="kurzT">Die Seite in fünf Ideen und einem Fazit</h2>
+  <p class="pfad-vor">30 Abschnitte, nach Paul Nurses fünf großen Ideen der Biologie geordnet, am Ende ein Fazit. Tippe eine Station.</p>
   <div class="kt-karte">
     <svg class="kt-svg" viewBox="0 0 56 432" aria-hidden="true" focusable="false">
       <path class="kt-l" d="M28 36 V396"/>
@@ -1354,7 +1354,7 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
       <circle class="kt-n" cx="28" cy="180" r="15" style="stroke:#7DBB63"/><text class="kt-z" x="28" y="185" text-anchor="middle">3</text>
       <circle class="kt-n" cx="28" cy="252" r="15" style="stroke:#D9A64A"/><text class="kt-z" x="28" y="257" text-anchor="middle">4</text>
       <circle class="kt-n" cx="28" cy="324" r="15" style="stroke:#E58F7A"/><text class="kt-z" x="28" y="329" text-anchor="middle">5</text>
-      <circle class="kt-n" cx="28" cy="396" r="15" style="stroke:#E8E6E0"/><text class="kt-z" x="28" y="401" text-anchor="middle">S</text>
+      <circle class="kt-n" cx="28" cy="396" r="15" style="stroke:#E8E6E0"/><text class="kt-z" x="28" y="401" text-anchor="middle">✓</text>
       <circle class="kt-p" cx="28" cy="36" r="4"/>
       <circle class="kt-p kt-p2" cx="28" cy="36" r="4"/>
     </svg>
@@ -1364,7 +1364,7 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
     <li><a href="#teil3"><b>Prinzip 3 von 5</b>Evolution<span>Zufall und Auslese</span></a></li>
     <li><a href="#teil4"><b>Prinzip 4 von 5</b>Leben als Chemie<span>Energie, Fabrik, Abfall</span></a></li>
     <li><a href="#teil5"><b>Prinzip 5 von 5</b>Leben als Information<span>Signale, Abwehr, Körper</span></a></li>
-    <li><a href="#teil6"><b>Schluss</b>Was ist Leben?<span>Ausfall, Tag, Rückblick</span></a></li>
+    <li><a href="#teil6"><b>Fazit</b>Was ist Leben?<span>Ausfall, Tag, Rückblick</span></a></li>
     </ol>
   </div>
   <details class="kurz-alle">
@@ -1409,7 +1409,7 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
     <li><a href="#koerper">Der Körper ist ein Netz aus Netzen</a></li>
     <li><a href="#kreislauf">Das Herz liefert, die Gefäße verteilen</a></li>
   </ol>
-  <h3 class="kurz-teil"><a href="#teil6">Schluss: Was ist Leben?</a></h3>
+  <h3 class="kurz-teil"><a href="#teil6">Fazit: Was ist Leben?</a></h3>
   <ol class="kurz-chips c-phys">
     <li><a href="#ausfall">Fällt eine Stelle aus, merkt es der Rest</a></li>
     <li><a href="#tag">Dein Tag in einer Zelle</a></li>
@@ -1427,10 +1427,12 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
   .teil-nr::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--tc); margin-right: 10px; vertical-align: 1px; }
   .teil-frage { margin: 0 auto 8px; max-width: 46ch; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 17px; line-height: 1.45; color: var(--tc); }
   .teil-bruecke { max-width: 640px; margin: 8px auto 0; padding: 0 20px; text-align: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: #A9AFC0; }
-  .idee-band { position: sticky; top: 0; z-index: 30; margin: 24px auto 0; max-width: 640px; padding: 6px 56px 6px 12px; display: none; align-items: center; gap: 4px; background: rgba(13,19,16,0.92); backdrop-filter: blur(6px); border-bottom: 1px solid #25314a; font-family: 'IBM Plex Sans', sans-serif; }
+  .idee-band { position: sticky; top: 0; z-index: 30; margin: 24px auto 0; max-width: 640px; padding: 6px 56px 6px 12px; display: none; align-items: center; gap: 4px; background: #0F1713; border-bottom: 1px solid #25314a; font-family: 'IBM Plex Sans', sans-serif; }
   .idee-band.an { display: flex; }
   .idee-band a { flex: none; display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border-radius: 50%; font-size: 13px; font-weight: 600; color: #A9AFC0; text-decoration: none; position: relative; }
   .idee-band a::before { content: ""; position: absolute; width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--c); opacity: 0.55; }
+  .idee-band a.fazit { min-width: 64px; }
+  .idee-band a.fazit::before { width: 56px; height: 26px; border-radius: 13px; }
   .idee-band a[aria-current="true"] { color: #0D1310; }
   .idee-band a[aria-current="true"]::before { background: var(--c); opacity: 1; }
   .idee-band a span { position: relative; }
@@ -1502,7 +1504,7 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
     .aus-leit .al-flow { animation: none; }
     .dorf-vgl .bar i, #dorfPanel .stat .bar i { transition: none; }
   }
-</style><nav class="idee-band" id="ideeBand" aria-label="Die fünf Ideen und der Schluss"><a href="#teil1" style="--c:#4FA9B1" aria-label="Prinzip 1: Die Zelle"><span>1</span></a><a href="#teil2" style="--c:#8590E6" aria-label="Prinzip 2: Das Gen"><span>2</span></a><a href="#teil3" style="--c:#7DBB63" aria-label="Prinzip 3: Evolution"><span>3</span></a><a href="#teil4" style="--c:#D9A64A" aria-label="Prinzip 4: Leben als Chemie"><span>4</span></a><a href="#teil5" style="--c:#E58F7A" aria-label="Prinzip 5: Leben als Information"><span>5</span></a><a href="#teil6" style="--c:#E8E6E0" aria-label="Schluss: Was ist Leben?"><span>S</span></a><span class="band-name" id="ideeName" aria-hidden="true"></span></nav>
+</style><nav class="idee-band" id="ideeBand" aria-label="Die fünf Ideen und das Fazit"><a href="#teil1" style="--c:#4FA9B1" aria-label="Prinzip 1: Die Zelle"><span>1</span></a><a href="#teil2" style="--c:#8590E6" aria-label="Prinzip 2: Das Gen"><span>2</span></a><a href="#teil3" style="--c:#7DBB63" aria-label="Prinzip 3: Evolution"><span>3</span></a><a href="#teil4" style="--c:#D9A64A" aria-label="Prinzip 4: Leben als Chemie"><span>4</span></a><a href="#teil5" style="--c:#E58F7A" aria-label="Prinzip 5: Leben als Information"><span>5</span></a><a class="fazit" href="#teil6" style="--c:#E8E6E0" aria-label="Fazit: Was ist Leben?"><span>Fazit</span></a><span class="band-name" id="ideeName" aria-hidden="true"></span></nav>
 
 <div class="teil-kopf" id="teil1" role="group" aria-label="Prinzip 1 von 5: Die Zelle" style="--tc:#4FA9B1">
   <p class="teil-nr">Prinzip 1 von 5</p>
@@ -2628,8 +2630,8 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
   <details class="hinkt"><summary><span class="hinkt-band" aria-hidden="true"></span>Wo das Bild hinkt<span class="hinkt-sr">: Kreislauf</span></summary><div class="hinkt-body"><p>Ein Lieferdienst folgt einem Plan. Das Herz regelt nicht nach Fahrplan, die Gefäße verengen und weiten sich selbst, je nach Signalen und örtlichem Bedarf. Der Kreislauf ist auch kein einfacher Ring, sondern viele Wege, die sich teilen und wieder treffen.</p><p>Die Zahlen sind frei gewählte Beispielwerte. Sie sind keine Hinweise für Gesundheit oder Training und sagen nichts über den eigenen Körper. Bei Beschwerden hilft eine Arztpraxis, nicht diese Seite.</p><p class="hinkt-frage"><span class="weiter-eb">Zum Weiterdenken</span>Warum gehen Muskeln bei Anstrengung vor?</p><p class="weiter-antwort"><b>Mögliche Antwort:</b> Sie verbrauchen dann am meisten Sauerstoff und Nährstoffe. Ihre Gefäße weiten sich, die zu Darm und Haut verengen sich teilweise.</p></div></details>
 </section>
 
-<div class="teil-kopf" id="teil6" role="group" aria-label="Schluss: Was ist Leben?" style="--tc:#E8E6E0">
-  <p class="teil-nr">Schluss</p>
+<div class="teil-kopf" id="teil6" role="group" aria-label="Fazit: Was ist Leben?" style="--tc:#E8E6E0">
+  <p class="teil-nr">Fazit</p>
   <p class="teil-titel">Was ist Leben?</p>
   <p class="teil-frage">Wie hängen die fünf Ideen zusammen?</p>
   <p class="teil-satz">Fällt ein Teil aus, merken es die anderen. Das zeigt, wie eng die fünf Ideen verwoben sind.</p>
@@ -7964,6 +7966,14 @@ details.wort-vorab > p { margin: 10px 4px 4px; font-size: 13px; line-height: 1.6
     }
     window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
     window.addEventListener('resize', update);
+    band.addEventListener('click', function (e) {
+      var a = e.target.closest('a'); if (!a) return;
+      var t = document.querySelector(a.getAttribute('href')); if (!t) return;
+      e.preventDefault();
+      var root = document.documentElement; root.style.scrollBehavior = 'auto';
+      t.scrollIntoView(); history.replaceState(null, '', a.getAttribute('href'));
+      requestAnimationFrame(function () { root.style.scrollBehavior = ''; });
+    });
     update();
   }
   var kasse = document.getElementById('atpKasse');
